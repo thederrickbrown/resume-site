@@ -4,7 +4,7 @@
 @page { size: letter; margin: .5in .55in; }
 :root { --ink: #3a3a3a; --soft: #8a8a8a; --rule: #cfcfcf; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font: 9.6pt/1.45 Helvetica, Arial, sans-serif; color: var(--ink); }
+body { font: 9.4pt/1.4 Helvetica, Arial, sans-serif; color: var(--ink); }
 header { text-align: center; padding-bottom: .14in; border-bottom: 3px solid var(--rule); }
 header h1 { font-weight: 400; font-size: 34pt; letter-spacing: .02em; line-height: 1.1; }
 header p { color: var(--soft); font-size: 13pt; letter-spacing: .04em; margin-top: .04in; }
@@ -18,9 +18,11 @@ aside p, aside li { font-size: 9.2pt; }
 aside ul { list-style: none; }
 aside li { padding-left: .12in; text-indent: -.12in; }
 aside li::before { content: "\25AA"; color: var(--soft); margin-right: .05in; font-size: 7pt; }
-aside .grp { font-weight: 700; margin-top: .06in; font-size: 8.6pt; letter-spacing: .04em; text-transform: uppercase; color: var(--soft); }
+aside .grp { break-after: avoid; font-weight: 700; margin-top: .06in; font-size: 8.6pt; letter-spacing: .04em; text-transform: uppercase; color: var(--soft); }
 a { color: inherit; text-decoration: none; }
-.job { margin-bottom: .13in; break-inside: avoid-page; }
+.job { margin-bottom: .11in; }
+.job h3, .job .meta { break-after: avoid; }
+.job li { break-inside: avoid; }
 .job h3 { font-weight: 400; font-size: 10.5pt; text-transform: uppercase; }
 .job .meta { font-style: italic; color: var(--soft); text-transform: uppercase; font-size: 9.2pt; margin-bottom: .03in; }
 .job ul { padding-left: .15in; }
@@ -44,6 +46,8 @@ main > p { margin-bottom: .06in; }
   <p>Engineering manager, product, or contract roles at small companies and startups, especially healthtech and fintech.</p>
 
   <h2>SKILLS</h2>
+  <p class="grp">AI</p>
+  <ul><li>LLM agents and tool calling</li><li>Claude and OpenAI APIs</li><li>Laravel AI SDK</li><li>Knowledge-base search</li><li>LLM classify and summarize</li><li>Claude Code, AI agents</li><li>NLP, sentiment analysis</li><li>PyTorch, TensorFlow</li><li>Computer vision prototyping</li></ul>
   <p class="grp">Languages</p>
   <ul><li>PHP</li><li>JavaScript / TypeScript</li><li>Python</li><li>SQL (MySQL)</li><li>HTML5 / CSS3</li></ul>
   <p class="grp">Frameworks</p>
@@ -51,7 +55,7 @@ main > p { margin-bottom: .06in; }
   <p class="grp">Platforms</p>
   <ul><li>AWS, Google Cloud</li><li>Docker, Jenkins</li><li>Stripe Connect and Treasury</li><li>Lago, HubSpot</li><li>Twilio, Vonage, Pusher</li></ul>
   <p class="grp">Practice</p>
-  <ul><li>REST API design</li><li>Microservices</li><li>HIPAA safeguards and encryption</li><li>Launch plans and QA</li><li>Code review, unit testing</li><li>Team leadership, mentoring</li><li>AI coding agents</li></ul>
+  <ul><li>REST API design</li><li>Microservices</li><li>HIPAA and encryption</li><li>Launch plans and QA</li><li>Code review, unit testing</li><li>Team leadership, mentoring</li></ul>
 
   <h2>EDUCATION</h2>
   <p>Bachelor of Science<br>Computer Science<br>Kent State University<br>Kent, OH, May 2006</p>
@@ -63,7 +67,8 @@ main > p { margin-bottom: .06in; }
 <main>
   <h2>PROFILE</h2>
   <p>Hands-on senior engineer and team lead with 15+ years of experience building web applications and REST APIs. Most recently at a healthtech startup, I took over an inherited codebase, got it shipping, and owned features from the plan through launch.</p>
-  <p>Comfortable working with founders, clinical operators, and finance teams, and turning business rules into software. Deep experience with PHP and Laravel, payments and money movement, and HIPAA-regulated data. Looking for a small team where I can take a product vision to market.</p>
+  <p>Comfortable working with founders, clinical operators, and finance teams, and turning business rules into software. Deep experience with PHP and Laravel, payments and money movement, and HIPAA-regulated data.</p>
+  <p>Builds with AI every day: LLM agents with tool calling in production, AI pipelines that classify and summarize, and AI coding agents that let a small team ship like a larger one. Looking for a small team where I can take a product vision to market.</p>
 
   <h2>PROFESSIONAL EXPERIENCE</h2>
   <div class="job">
@@ -73,6 +78,7 @@ main > p { margin-bottom: .06in; }
     <ul>
       <li>Took over an inherited Laravel and React codebase (2,600+ contractor commits) after the internal team gained full control, and shipped steadily from September 2025.</li>
       <li>Built the internal clinic onboarding platform on Stripe Connect and Treasury: connected and financial accounts, flow-of-funds agreements, and scheduled payouts. Wrote its three-phase plan.</li>
+      <li>Built Jevi, an in-app AI support assistant (Laravel AI SDK) that uses tool calling to answer from the knowledge base and from the clinic users, locations, and patients each user is allowed to see.</li>
       <li>Designed a clinician work log so one person can be W-2 and 1099 at the same practice, with a payroll export.</li>
       <li>Built a Lago usage-billing system to unify subscription and per-exam billing, then wrote the reconciliation tooling for moving about 300 clinics' subscriptions to HubSpot.</li>
       <li>Shipped clinical features for a specialty sleep-medicine partner: assessments, consult plans, encounter types, and consents.</li>
@@ -91,6 +97,14 @@ main > p { margin-bottom: .06in; }
     </ul>
   </div>
   <div class="job">
+    <h3>AI Projects</h3>
+    <p class="meta">Independent &nbsp;|&nbsp; 2026</p>
+    <ul>
+      <li>Med spa regulatory watch: a weekly agent that sweeps state and federal bills through the LegiScan API, uses Claude to judge relevance and write plain-language summaries, diffs against the last run, and emails what moved. Facts like bill numbers and dates come only from the API, never the model.</li>
+      <li>Computer-vision prototype that turns dashcam video and GPS tracks into map positions of roadside cameras, using bearing and triangulation math.</li>
+    </ul>
+  </div>
+  <div class="job">
     <h3>Senior Software Engineer</h3>
     <p class="meta">Voxox &nbsp;|&nbsp; San Diego, CA &nbsp;|&nbsp; 2013 - 2025</p>
     <p>Recognized for creating a highly scalable micro-services architecture and developing a Robo Call filtering REST API that received over 1 million requests within its first month.</p>
@@ -99,6 +113,7 @@ main > p { margin-bottom: .06in; }
       <li>Designed and implemented a highly scalable microservices architecture, reducing server costs by 30% and improving system reliability.</li>
       <li>Architected RESTful APIs for a business phone system's calling and text-marketing platform, enabling integration with third-party applications.</li>
       <li>Led the development of a real-time recommendation engine that increased user engagement by 25%.</li>
+      <li>Implemented machine learning for natural language processing, enabling sentiment analysis and chatbot features.</li>
       <li>Improved code quality through code reviews, unit testing, and automation, resulting in a 50% reduction in bug incidents.</li>
       <li>Led and mentored a cross-functional development team and worked closely with product managers to turn business requirements into technical specifications.</li>
     </ul>
