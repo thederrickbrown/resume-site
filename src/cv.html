@@ -1,0 +1,131 @@
+<!doctype html><meta charset="utf-8"><title>Derrick Brown CV</title>
+<style>
+/* Source for DerrickBrown.pdf. Build with: zsh src/build-cv.sh. Letter size, same two-column look as the 2024 CV. */
+@page { size: letter; margin: .5in .55in; }
+:root { --ink: #3a3a3a; --soft: #8a8a8a; --rule: #cfcfcf; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font: 9.6pt/1.45 Helvetica, Arial, sans-serif; color: var(--ink); }
+header { text-align: center; padding-bottom: .14in; border-bottom: 3px solid var(--rule); }
+header h1 { font-weight: 400; font-size: 34pt; letter-spacing: .02em; line-height: 1.1; }
+header p { color: var(--soft); font-size: 13pt; letter-spacing: .04em; margin-top: .04in; }
+.cols { display: grid; grid-template-columns: 2.05in 1fr; }
+aside { padding: .16in .2in 0 0; border-right: 1px solid var(--rule); }
+main { padding: .16in 0 0 .22in; }
+h2 { font-weight: 400; font-size: 14pt; color: var(--soft); letter-spacing: .02em; border-bottom: 2px solid var(--rule);
+     padding-bottom: .03in; margin: .2in 0 .08in; break-after: avoid; }
+aside h2:first-child, main h2:first-child { margin-top: 0; }
+aside p, aside li { font-size: 9.2pt; }
+aside ul { list-style: none; }
+aside li { padding-left: .12in; text-indent: -.12in; }
+aside li::before { content: "\25AA"; color: var(--soft); margin-right: .05in; font-size: 7pt; }
+aside .grp { font-weight: 700; margin-top: .06in; font-size: 8.6pt; letter-spacing: .04em; text-transform: uppercase; color: var(--soft); }
+a { color: inherit; text-decoration: none; }
+.job { margin-bottom: .13in; break-inside: avoid-page; }
+.job h3 { font-weight: 400; font-size: 10.5pt; text-transform: uppercase; }
+.job .meta { font-style: italic; color: var(--soft); text-transform: uppercase; font-size: 9.2pt; margin-bottom: .03in; }
+.job ul { padding-left: .15in; }
+.job li { margin-top: .02in; }
+.job li::marker { content: "\25AA  "; color: var(--soft); font-size: 8pt; }
+main > p { margin-bottom: .06in; }
+</style>
+<header>
+  <h1>DERRICK BROWN</h1>
+  <p>SENIOR SOFTWARE ENGINEER &nbsp;|&nbsp; TEAM LEAD</p>
+</header>
+<div class="cols">
+<aside>
+  <h2>CONTACT</h2>
+  <p>213.863.2959<br>thederrickbrown@gmail.com<br>San Diego, California<br>linktr.ee/thederrickbrown</p>
+
+  <h2>LINKS</h2>
+  <p>linkedin.com/in/thederrickbrown<br>github.com/thederrickbrown<br>resume.dmbweb.com</p>
+
+  <h2>LOOKING FOR</h2>
+  <p>Engineering manager, product, or contract roles at small companies and startups, especially healthtech and fintech.</p>
+
+  <h2>SKILLS</h2>
+  <p class="grp">Languages</p>
+  <ul><li>PHP</li><li>JavaScript / TypeScript</li><li>Python</li><li>SQL (MySQL)</li><li>HTML5 / CSS3</li></ul>
+  <p class="grp">Frameworks</p>
+  <ul><li>Laravel</li><li>Laminas (Zend), Symfony</li><li>React, React Native</li><li>Vite, Capacitor</li><li>Angular, Vue.js</li><li>WordPress, Magento</li></ul>
+  <p class="grp">Platforms</p>
+  <ul><li>AWS, Google Cloud</li><li>Docker, Jenkins</li><li>Stripe Connect and Treasury</li><li>Lago, HubSpot</li><li>Twilio, Vonage, Pusher</li></ul>
+  <p class="grp">Practice</p>
+  <ul><li>REST API design</li><li>Microservices</li><li>HIPAA safeguards and encryption</li><li>Launch plans and QA</li><li>Code review, unit testing</li><li>Team leadership, mentoring</li><li>AI coding agents</li></ul>
+
+  <h2>EDUCATION</h2>
+  <p>Bachelor of Science<br>Computer Science<br>Kent State University<br>Kent, OH, May 2006</p>
+  <p style="margin-top:.06in">Studied advanced algorithms. Kent Inter-Hall Council President.</p>
+
+  <h2>INTERESTS</h2>
+  <p>Automation, Web Scraping, Online Marketing, Table Tennis</p>
+</aside>
+<main>
+  <h2>PROFILE</h2>
+  <p>Hands-on senior engineer and team lead with 15+ years of experience building web applications and REST APIs. Most recently at a healthtech startup, I took over an inherited codebase, got it shipping, and owned features from the plan through launch.</p>
+  <p>Comfortable working with founders, clinical operators, and finance teams, and turning business rules into software. Deep experience with PHP and Laravel, payments and money movement, and HIPAA-regulated data. Looking for a small team where I can take a product vision to market.</p>
+
+  <h2>PROFESSIONAL EXPERIENCE</h2>
+  <div class="job">
+    <h3>Senior Software Engineer</h3>
+    <p class="meta">We Treat &nbsp;|&nbsp; San Diego, CA &nbsp;|&nbsp; 2025 - 2026</p>
+    <p>Practice-management software for medspas and aesthetics clinics.</p>
+    <ul>
+      <li>Took over an inherited Laravel and React codebase (2,600+ contractor commits) after the internal team gained full control, and shipped steadily from September 2025.</li>
+      <li>Built the internal clinic onboarding platform on Stripe Connect and Treasury: connected and financial accounts, flow-of-funds agreements, and scheduled payouts. Wrote its three-phase plan.</li>
+      <li>Designed a clinician work log so one person can be W-2 and 1099 at the same practice, with a payroll export.</li>
+      <li>Built a Lago usage-billing system to unify subscription and per-exam billing, then wrote the reconciliation tooling for moving about 300 clinics' subscriptions to HubSpot.</li>
+      <li>Shipped clinical features for a specialty sleep-medicine partner: assessments, consult plans, encounter types, and consents.</li>
+      <li>Kept the legacy and new frontends running on one backend through the migration.</li>
+      <li>Owned launch tracking (launch plans, QA checklists), wrote executive summaries, a release runbook generator, and the engineering handoff.</li>
+      <li>Built an automated, narrated video pipeline that produced 28 product how-to guides.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Contract Engineer and Technical Partner</h3>
+    <p class="meta">Telehealth startup &nbsp;|&nbsp; San Diego, CA &nbsp;|&nbsp; 2026</p>
+    <ul>
+      <li>Rebuilt a telehealth good-faith-exam platform from scratch for a non-technical founder whose previous developer had disappeared, after reverse-engineering about 55 endpoints from the live app.</li>
+      <li>Set up a HIPAA-ready cloud stack with encrypted private databases, least-privilege access, and field-level encryption of patient data.</li>
+      <li>Delivered two web portals from one codebase plus an iOS and Android provider app, and acted as the founder's product owner.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Senior Software Engineer</h3>
+    <p class="meta">Voxox &nbsp;|&nbsp; San Diego, CA &nbsp;|&nbsp; 2013 - 2025</p>
+    <p>Recognized for creating a highly scalable micro-services architecture and developing a Robo Call filtering REST API that received over 1 million requests within its first month.</p>
+    <ul>
+      <li>Led a team of software engineers rebuilding the legacy customer-facing web application from scratch in React Native, with Google authentication.</li>
+      <li>Designed and implemented a highly scalable microservices architecture, reducing server costs by 30% and improving system reliability.</li>
+      <li>Architected RESTful APIs for a business phone system's calling and text-marketing platform, enabling integration with third-party applications.</li>
+      <li>Led the development of a real-time recommendation engine that increased user engagement by 25%.</li>
+      <li>Improved code quality through code reviews, unit testing, and automation, resulting in a 50% reduction in bug incidents.</li>
+      <li>Led and mentored a cross-functional development team and worked closely with product managers to turn business requirements into technical specifications.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Digital Marketing Consultant</h3>
+    <p class="meta">DMB Web &nbsp;|&nbsp; San Diego, CA &nbsp;|&nbsp; 2008 - Present</p>
+    <ul>
+      <li>Built websites and digital marketing for small businesses, including a city government, a community bank, and a modeling agency.</li>
+      <li>Set up SMS marketing, customer management, and automated communication tools for clients.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>JavaScript Developer</h3>
+    <p class="meta">Dealer Tire &nbsp;|&nbsp; Cleveland, OH &nbsp;|&nbsp; 2011 - 2013</p>
+    <ul>
+      <li>Implemented crucial client-side features for an early-stage single-page application in Backbone.js and Node.js as part of a large scrum-based agile team.</li>
+      <li>Built responsive HTML5 and CSS3 across the app using Sass and LESS, and integrated with RESTful APIs.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Senior PHP Programmer</h3>
+    <p class="meta">Informediate &nbsp;|&nbsp; Akron, OH &nbsp;|&nbsp; 2010 - 2011</p>
+    <ul>
+      <li>Helped design and build SourceWare, a PHP enterprise resource planning (ERP) suite covering inventory, order processing, and real-time reporting.</li>
+      <li>Developed RESTful APIs for integration with third-party retail platforms.</li>
+    </ul>
+  </div>
+</main>
+</div>
