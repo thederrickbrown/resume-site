@@ -85,6 +85,9 @@ section + section { border-top: 1px solid var(--line); }
 /* hero */
 .hero { padding-block: 72px 88px; }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.who { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.face { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid var(--card); box-shadow: 0 0 0 1px var(--line), 0 10px 24px -14px rgb(20 27 43 / .5); }
+.contact .face { width: 72px; height: 72px; margin-bottom: 18px; }
 .status { display: inline-flex; align-items: center; gap: 10px; background: var(--amber); color: var(--amber-ink); border-radius: 999px;
           padding: 7px 14px; font: 600 14px/1 var(--f-body); }
 .status i { width: 8px; height: 8px; border-radius: 50%; background: var(--amber-ink); }
@@ -198,7 +201,10 @@ footer a { color: var(--ink-2); }
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="status"><i></i>Open to new roles</span>
+      <div class="who">
+        <img class="face" src="images/derrick.jpg" alt="Derrick Brown" width="96" height="96">
+        <span class="status"><i></i>Open to new roles</span>
+      </div>
       <h1>I take products from <em>idea to shipped.</em></h1>
       <p class="lede">Senior engineer and team lead with 15+ years building web products, lately in healthtech, payments, and AI. I'm looking for an engineering manager, product, or founding engineer role at a small company that wants to get a vision to market.</p>
       <div class="ctas">
@@ -213,7 +219,6 @@ footer a { color: var(--ink-2); }
         <li><time>Oct 2026</time><div><b>I-5 Junk Hauling</b><br><span>My own business, launched with an AI quote assistant</span></div></li>
         <li><time>Oct 2026</time><div><b>GFEme rebuild</b><br><span>Telehealth platform, 84 commits in four weeks</span></div></li>
         <li><time>Aug 2026</time><div><b>StayKeto</b><br><span>iOS app, API, and nutrition data pipeline</span></div></li>
-        <li><time>2026</time><div><b>We Treat</b><br><span>Stripe Connect onboarding and the Jevi AI assistant</span></div></li>
         <li><time>Mar 2026</time><div><b>National MedSpa</b><br><span>Agency site with a compliance-score tool</span></div></li>
         <li><time>Feb 2025</time><div><b>GoldStarBot</b><br><span>Slack recognition app with Stripe billing</span></div></li>
       </ol>
@@ -379,6 +384,7 @@ footer a { color: var(--ink-2); }
 <section id="contact" class="contact">
   <div class="wrap">
     <div>
+      <img class="face" src="images/derrick.jpg" alt="" width="72" height="72">
       <p class="eyebrow">Contact</p>
       <h2 style="margin-top:14px">Hiring for a small team?</h2>
       <p class="lede" style="margin-top:14px">I'd like to hear what you're building. Send a note and I'll reply within a day.</p>
